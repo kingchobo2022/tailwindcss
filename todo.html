@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>할일관리 프로그램 템플릿</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div id="head" class="flex border-pink-800 border-t-2">
+        <div class="w-full">
+            <header class="flex bg-white justify-between h-20 border-b-2 border-b-pink-200 items-center px-6">
+                <div id="left-header" class="">
+                </div>
+                <div id="right-header" class="text-slate-800 hover:text-slate-500 space-x-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-7 h-7">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                </div>
+            </header>
+        </div>
+    </div>
+    <div id="content" class="mx-auto w-[550px]">
+        <div class="container content py-6 mx-auto">
+            <div class="mx-auto">
+                <div id="create-form" class="hover:shadow p-6 bg-white border-pink-500 border-t-4">
+                    <div class="flex">
+                        <h2 class="font-semibold text-lg text-gray-800 mb-5 border-blue-300 border-b-4">새로운 할 일</h2>
+                    </div>
+                    <div>
+                        <form>
+                            <div class="mb-6">
+                                <label for="title"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">*
+                                    할 일 </label>
+                                <input type="text" id="title" placeholder="할 일을 입력해 주세요."
+                                    class="bg-gray-100  text-gray-900 text-sm rounded block w-full p-2.5">
+
+                                <span class="text-red-500 text-xs mt-3 block">Error</span>
+
+                            </div>
+                            <button type="submit"
+                                class="px-4 py-2 bg-pink-500 text-white font-semibold rounded hover:bg-pink-700">등록
+                                </button>
+                            <span class="text-blue-500 text-xs">Saved</span>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="search-box" class="flex flex-col items-center px-2 my-4 justify-center">
+            <div class="flex justify-center items-center">
+
+               검색: <input type="text" placeholder="검색어를 입력해 주세요."
+                    class="bg-gray-100 ml-2 rounded px-4 py-2 hover:bg-gray-100" />
+            </div>
+            <span class="text-red-500 text-xs block mt-2">Error</span>
+
+        </div>
+        <div id="todos-list">
+            <div class="todo mb-5 card px-5 py-6 bg-white col-span-1 border-t-2 border-pink-500 hover:shadow">
+                <div class="flex justify-between space-x-2">
+
+                    <!-- <input type="text" placeholder="Todo.."
+                                class="bg-gray-100  text-gray-900 text-sm rounded block w-full p-2.5"
+                                value="Todo Name">
+                            
+                                <span class="text-red-500 text-xs block">error</span> -->
+
+                    <h3 class="text-slate-900">장보러 가기</h3>
+
+
+
+                    <div class="flex items-center space-x-2">
+                        <button class="border rounded px-2 py-1 bg-blue-400 text-white text-xs hover:bg-blue-700">
+                            수정
+                        </button>
+                        <button class="border rounded px-2 py-1 bg-pink-600 text-white text-xs hover:bg-pink-800 mr-1">
+                            삭제
+                        </button>
+                    </div>
+                </div>
+                <span class="text-xs text-gray-500"> 2022-02-19 </span>
+                <div class="mt-3 text-xs text-gray-700">
+                    <!--                  
+                    <button class="mt-3 px-4 py-2 bg-slate-400 text-white font-semibold rounded hover:bg-slate-600">Update</button>
+                    <button class="mt-3 px-4 py-2 bg-pink-400 text-white font-semibold rounded hover:bg-pink-600">Cancel</button>
+                      -->
+
+                </div>
+            </div>
+
+            <div class="my-2">
+                페이지네이션 위치
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
